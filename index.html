@@ -751,7 +751,7 @@
                 if (m) return leading + `الصف ب-${m[1]}` + trailing;
                 m = trimmed.match(/^טעות\s+(\d+)\s+מתוך\s+(\d+)$/);
                 if (m) return leading + `خطأ ${m[1]} من ${m[2]}` + trailing;
-                if (trimmed.startsWith('בית ספר טכנולוגי | כיתה')) return leading + trimmed.replace('בית ספר טכנולוגי | כיתה', 'مدرسة تكنولوجية | الصف') + trailing;
+                if (trimmed.startsWith('בית ספר יסודי יפה נוף | כיתה')) return leading + trimmed.replace('בית ספר יסודי יפה נוף | כיתה', 'مدرسة تكنولوجية | الصف') + trailing;
             } else {
                 let m = trimmed.match(/^السؤال\s+(\d+)\s+من\s+(\d+)$/);
                 if (m) return leading + `שאלה ${m[1]} מתוך ${m[2]}` + trailing;
@@ -759,7 +759,7 @@
                 if (m) return leading + `כיתה ב'-${m[1]}` + trailing;
                 m = trimmed.match(/^خطأ\s+(\d+)\s+من\s+(\d+)$/);
                 if (m) return leading + `טעות ${m[1]} מתוך ${m[2]}` + trailing;
-                if (trimmed.startsWith('مدرسة تكنولوجية | الصف')) return leading + trimmed.replace('مدرسة تكنولوجية | الصف', 'בית ספר טכנולוגי | כיתה') + trailing;
+                if (trimmed.startsWith(المدرسة الابتدائية يافي نوف | الصف')) return leading + trimmed.replace('المدرسة الابتدائية يافي نوف | الصف | الصف', 'בית ספר יסודי יפה נוף | כיתה') + trailing;
             }
             return value;
         }
